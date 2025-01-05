@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        pixel: ['"Press Start 2P"', 'monospace'], // For overskrifter
+        sans: ['Arial', 'Helvetica', 'sans-serif'], // For generell tekst
+      },
     },
   },
   plugins: [],

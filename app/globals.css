@@ -2,20 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #c0c0c0; /* Lysegrå Windows 97 bakgrunn */
+  --foreground: #000000; /* Sort tekst */
+  --border-light: #ffffff; /* Hvit kant */
+  --border-dark: #808080; /* Mørk grå kant */
+  --highlight: #0000ff; /* Windows-blå aksentfarge */
+  --button-bg: #d3d3d3; /* Lys grå for knapper */
+  --button-hover: #a9a9a9; /* Mørkere grå ved hover */
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Legg til globale stiler for 3D-effekter */
+.button {
+  background: var(--button-bg);
+  border: 2px solid var(--border-dark);
+  border-top-color: var(--border-light);
+  border-left-color: var(--border-light);
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--button-hover);
+}
+
+.window {
+  background: var(--background);
+  border: 2px solid var(--border-dark);
+  border-top-color: var(--border-light);
+  border-left-color: var(--border-light);
+  padding: 16px;
+  box-shadow: 2px 2px var(--border-dark), -2px -2px var(--border-light);
+}
+
+.title-bar {
+  background: var(--highlight);
+  color: var(--background);
+  padding: 8px;
+  font-weight: bold;
 }
