@@ -25,7 +25,6 @@ const SearchBar = () => {
             words={["Jasmine Athea Næss"]}
             loop={1}
             typeSpeed={150}
-            deleteSpeed={50}
             cursor
             cursorStyle="_"
           />

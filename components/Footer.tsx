@@ -7,7 +7,7 @@ const Footer = () => {
             Om denne siden
           </div>
           <div className="flex gap-1">
-            <div className="bg-gray-300 px-2 py-1 border border-black shadow-[2px_2px_0px_#ffffff,-2px_-2px_0px_#808080]">
+            <div className="bg-gray-300 px-2 py-1 border border-black shadow-[2px_2px_0px_#ffffff,-2px_-2px_0px_#808080] cursor-pointer">
               Kontakt
             </div>
           </div>
