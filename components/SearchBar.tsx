@@ -15,7 +15,8 @@ const SearchBar = () => {
     <div className="flex flex-col items-center mt-20">
       {/* Søkebar */}
       <div
-        className="bg-blue-800 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] flex items-stretch py-1 px-2 h-12 mb-6">
+        className="bg-blue-800 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] flex items-stretch py-1 px-2 h-12 mb-6"
+      >
         <div
           className="bg-gray-100 text-lg md:text-2xl px-2 text-black focus:outline-none cursor-default flex items-center w-full h-full font-pixel"
           style={{ width: "calc(1ch * 23)" }}
@@ -53,13 +54,15 @@ const SearchBar = () => {
 
       {/* Seksjoner */}
       {showContent && (
-        <div className="w-full max-w-4xl flex flex-col items-center gap-4 mt-6">
-          <Window title="Velkommen 👋">
-            <p className="text-black mb-2">
-              Hei og velkommen til nettsiden min! Målet er at du skal få et innblikk i hvem jeg er og hva jeg driver med. Håper du liker den!
-            </p>
-          </Window>
+        <div className="w-full max-w-4xl flex flex-col items-center">
+          <p className="text-gray-50 font-pixel font-bold text-sm text-center mb-6">
+            Viser resultater for "Jasmine Athea Næss":
+          </p>
 
+          {/* Ekstra mellomrom */}
+          <div className="mb-8"></div>
+
+          {/* Vinduer */}
           <Window title="Prosjekter 🧠">
             <p className="text-black mb-2">Utforsk mine tidligere kodeprosjekter.</p>
             <Link href="/projects">
