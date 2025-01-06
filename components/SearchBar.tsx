@@ -56,7 +56,7 @@ const SearchBar = () => {
       {showContent && (
         <div className="w-full max-w-4xl flex flex-col items-center">
           <p className="text-gray-50 font-pixel font-bold text-sm text-center mb-6">
-            Viser resultater for "Jasmine Athea Næss":
+            Viser resultater for &quot;Jasmine Athea Næss&quot;:
           </p>
 
           {/* Ekstra mellomrom */}
