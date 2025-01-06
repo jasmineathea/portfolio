@@ -42,7 +42,7 @@ export default function About() {
 
           {/* Beskrivelse */}
           <p className="mt-6 text-gray-50">
-            Live | Laugh | Love | Likestilling i teknologibransjen
+            24 år gammel fra Jessheim. Teknologi- og økonomistudent i Bergen. Engasjert i studentmiljøet, likestilling i tech-bransjen, undervisning og læring 👩🏻‍💻
           </p>
         </div>
       </div>
@@ -103,21 +103,72 @@ export default function About() {
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Boots Apotek</h3>
-                <span className="text-sm text-gray-700 font-pixel">2014 - Nå</span>
+                <span className="text-sm text-gray-700 font-pixel">August 2014 -</span>
               </div>
               <p className="text-sm text-gray-800">
-                Apotektekniker (tilkallingsvikar): Kundeservice, grunnleggende kunnskap om legemidler.
+                Apotektekniker (tilkallingsvikar)
               </p>
+              <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+                <li>Arbeidsoppgaver innen kundeservice, samt rengjøring av lokalet</li>
+                <li>Grunnleggende kunnskap om diverse legemidler; bruk og risiko</li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-start">
+                <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
+                <span className="text-sm text-gray-700 font-pixel">August – desember 2024, 2023, 2022</span>
+              </div>
+              <p className="text-sm text-gray-800">
+                Vitenskapelig assistent INF140: Introduksjon til datasikkerhet
+              </p>
+              <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+                <li>Avholde gruppetimer i to timer per uke, veilede studentene med obligatoriske oppgaver</li>
+                <li>Retting og evaluering av oppgaver</li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-start">
+                <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
+                <span className="text-sm text-gray-700 font-pixel">Januar – mai 2024</span>
+              </div>
+              <p className="text-sm text-gray-800">
+                Studentassistent INF112: Innføring i systemutvikling
+              </p>
+              <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+                <li>Avholde gruppetimer i to timer per uke, veilede studentene med obligatoriske oppgaver</li>
+                <li>Retting og evaluering av oppgaver</li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-start">
+                <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
+                <span className="text-sm text-gray-700 font-pixel">2022 – 2023</span>
+              </div>
+              <p className="text-sm text-gray-800">
+                Studentmentor
+              </p>
+              <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+                <li>Følge opp studenter gjennom første studieår</li>
+                <li>Bidra til et godt faglig og sosialt miljø blant studentene</li>
+              </ul>
             </div>
 
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Pon Power Norge AS</h3>
-                <span className="text-sm text-gray-700 font-pixel">Juni - August (2020-2023)</span>
+                <span className="text-sm text-gray-700 font-pixel">Juni – august 2023, 2022, 2021, 2020</span>
               </div>
               <p className="text-sm text-gray-800">
-                Lageransatt (sommervikar): Booking og logistikk, kommunikasjon med selgere og transportører.
+                Lageransatt (sommervikar)
               </p>
+              <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+                <li>Arbeidsoppgaver innen booking og logistikk</li>
+                <li>Skrive proforma</li>
+                <li>Kommunikasjon med selgere og transportører</li>
+              </ul>
             </div>
 
             <div className="flex gap-3">
@@ -132,35 +183,86 @@ export default function About() {
 
         <Window title="Verv og frivillig arbeid 🤝">
           <div className="text-black space-y-4">
-            <div>
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">Jenter og Teknologi</h3>
-                <span className="text-sm text-gray-700 font-pixel">2023</span>
-              </div>
-              <p className="text-sm text-gray-800">
-                Rollemodell og foredragsholder: Promotering av kvinner i teknologi, vant tur til NASA for engasjement.
-              </p>
+          <div>
+            <div className="flex justify-between items-start">
+              <h3 className="font-bold text-lg font-pixel">Jenter og Teknologi</h3>
+              <span className="text-sm text-gray-700 font-pixel">2023 –</span>
             </div>
+            <p className="text-sm text-gray-800">
+              Rollemodell og foredragsholder
+            </p>
+            <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+              <li>Foredragsholder på Norgesturné for å fremme kvinner i teknologi, for jenter på ungdomsskole og videregående skole</li>
+              <li>Vant tur til NASA i Houston, Texas, grunnet sterk interesse for romfart og teknologi, samt engasjement rundt likestilling innen teknologibransjen</li>
+            </ul>
+          </div>
 
-            <div>
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">NHHI Cheer</h3>
-                <span className="text-sm text-gray-700 font-pixel">2024</span>
-              </div>
-              <p className="text-sm text-gray-800">
-                Informasjonsansvarlig og styremedlem: Rekruttering og sosiale medier.
-              </p>
+          <div>
+            <div className="flex justify-between items-start">
+              <h3 className="font-bold text-lg font-pixel">NHHI Cheer</h3>
+              <span className="text-sm text-gray-700 font-pixel">Januar – desember 2024</span>
             </div>
+            <p className="text-sm text-gray-800">
+              Informasjonsansvarlig og styremedlem
+            </p>
+            <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+              <li>Ansvar for sosiale medier og rekruttering av nye medlemmer til NHHI Cheer</li>
+            </ul>
+          </div>
 
-            <div>
-              <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">echo Bedriftskomitéen, UiB</h3>
-                <span className="text-sm text-gray-700 font-pixel">2021 - 2024</span>
-              </div>
-              <p className="text-sm text-gray-800">
-                Leder og styremedlem: Kontakt med næringslivet og organisering av bedriftsarrangementer.
-              </p>
+          <div>
+            <div className="flex justify-between items-start">
+              <h3 className="font-bold text-lg font-pixel">echo Bedriftskomitéen, UiB</h3>
+              <span className="text-sm text-gray-700 font-pixel">2021 – 2024</span>
             </div>
+            <p className="text-sm text-gray-800">
+              Leder og styremedlem
+            </p>
+            <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+              <li>Ansvarlig for kontakt med næringslivet og bidrag til linjeforeningens økonomi</li>
+              <li>Hovedansvar for planlegging og gjennomføring av bedriftspresentasjoner</li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="flex justify-between items-start">
+              <h3 className="font-bold text-lg font-pixel">echo – Linjeforeningen for informatikk, UiB</h3>
+              <span className="text-sm text-gray-700 font-pixel">2023 – 2024</span>
+            </div>
+            <p className="text-sm text-gray-800">
+              Styremedlem
+            </p>
+            <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+              <li>Ivareta og fremme studentenes studie- og arbeidsvilkår, både faglig og sosialt</li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="flex justify-between items-start">
+              <h3 className="font-bold text-lg font-pixel">echos Bedriftsturkomité, UiB</h3>
+              <span className="text-sm text-gray-700 font-pixel">Januar – september 2023</span>
+            </div>
+            <p className="text-sm text-gray-800">
+              Styremedlem
+            </p>
+            <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+              <li>Planlegging og gjennomføring av bedriftsekskursjon til Oslo for 60 informatikkstudenter ved Universitetet i Bergen</li>
+              <li>Turen innebar at studentene fikk besøke åtte bedrifter i løpet av 3 dager</li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="flex justify-between items-start">
+              <h3 className="font-bold text-lg font-pixel">UKEN i Bergen</h3>
+              <span className="text-sm text-gray-700 font-pixel">2021 – 2022</span>
+            </div>
+            <p className="text-sm text-gray-800">
+              Innkjøpssjef
+            </p>
+            <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+              <li>Ansvar for innkjøp og logistikkarbeid for UKEN, en festival drevet av studenter fra alle studiesteder i Bergen</li>
+            </ul>
+          </div>
 
             <div className="flex gap-3">
               <Link href="https://echo.uib.no" target="_blank">
@@ -178,6 +280,11 @@ export default function About() {
                   om NASA-turen
                 </button>
               </Link>
+              {/* <Link href="" target="_blank">
+                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                  om bedriftsturen
+                </button>
+              </Link> */}
             </div>
 
           </div>
@@ -196,11 +303,18 @@ export default function About() {
         <Window title="Hobbyer og interesser 🎨">
           <div className="text-black space-y-4">
             <ul className="list-disc pl-6 text-gray-800">
-              <li>Lesing og kreativ skriving</li>
-              <li>Friluftsliv: fjellturer og løping</li>
-              <li>Sying, hekling og fotografering</li>
-              <li>Reising og oppdagelse av nye kulturer</li>
+              <li> Lesing </li>
+              <li> Gå fjellturer, løping, cheerleading </li>
+              <li> Sying og hekling, foto, programmering </li>
             </ul>
+          </div>
+
+          <div className="flex gap-3 pt-3">
+            <Link href="https://app.thestorygraph.com/profile/jasmineathea" target="_blank">
+              <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                StoryGraph
+              </button>
+            </Link>
           </div>
         </Window>
 
@@ -210,6 +324,14 @@ export default function About() {
             <li>Engelsk 🇺🇸 flytende skriftlig og muntlig</li>
             <li>Fransk 🇫🇷 grunnleggende skriftlig og muntlig</li>
           </ul>
+
+          <div className="flex gap-3 pt-3">
+            <Link href="https://www.duolingo.com/profile/jasmineathea" target="_blank">
+              <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                Duolingo
+              </button>
+            </Link>
+          </div>
         </Window>
         
         {/* Tilbake-knapp */}
