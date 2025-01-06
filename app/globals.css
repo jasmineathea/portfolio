@@ -18,7 +18,6 @@ body {
   background: var(--background);
 }
 
-/* Legg til globale stiler for 3D-effekter */
 .button {
   background: var(--button-bg);
   border: 2px solid var(--border-dark);

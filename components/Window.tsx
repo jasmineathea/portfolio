@@ -4,7 +4,7 @@ const Window = ({ title, children }: { title: string; children: React.ReactNode 
   return (
     <div
       className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] w-full max-w-4xl mb-4"
-      style={{ minWidth: "300px", maxWidth: "640px" }} // Definer breddegrenser
+      style={{ minWidth: "320px", maxWidth: "640px" }} // Definer breddegrenser
     >
       {/* Vinduets header */}
       <div className="bg-blue-800 text-white font-bold font-pixel flex justify-between items-center h-8">

@@ -5,7 +5,7 @@ import SearchBar from "@/components/SearchBar";
 export default function Home() {
   return (
     <div
-      className="h-screen w-screen flex flex-col"
+      className="min-h-screen flex flex-col"
       style={{
         backgroundImage: "url('/field.jpg')",
         backgroundSize: "cover",
@@ -17,9 +17,9 @@ export default function Home() {
       <Header />
 
       {/* Main Content */}
-      <div className="flex-grow flex flex-col items-center justify-start">
+      <main className="flex-grow flex flex-col items-center justify-start w-full px-4">
         <SearchBar />
-      </div>
+      </main>
 
       {/* Footer */}
       <Footer />
