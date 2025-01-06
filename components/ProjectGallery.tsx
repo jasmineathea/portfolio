@@ -5,12 +5,12 @@ import Link from "next/link";
 
 const ProjectGallery = () => {
   const images = [
-    { title: "linselus", src: "/path-to-image1.jpg", link: "https://linselus.vercel.app", type: "nettside" },
-    { title: "Jasmines jul", src: "/path-to-image2.jpg", link: "https://jasminesjul.vercel.app", type: "nettside" },
-    { title: "Cat Fight", src: "/path-to-image4.jpg", link: null, type: "kildekode" },
-    { title: "Move Green", src: "/path-to-image5.jpg", link: "https://forwardedu.org/green_digitalization_course/NHH/2024/group1/home", type: "nettside" },
-    { title: "Tetris", src: "/path-to-image3.jpg", link: "https://github.com/jasmineathea/INF101/tree/main/tetris", type: "kildekode" },
-    { title: "Snake", src: "/path-to-image3.jpg", link: "https://github.com/jasmineathea/INF101/tree/main/snake", type: "kildekode" },
+    { title: "linselus", src: "linselus.png", link: "https://linselus.vercel.app", type: "nettside" },
+    { title: "Jasmines jul", src: "jul.png", link: "https://jasminesjul.vercel.app", type: "nettside" },
+    { title: "Cat Fight", src: "sc-fight.png", link: null, type: "kildekode" },
+    { title: "Move Green", src: "movegreen.png", link: "https://forwardedu.org/green_digitalization_course/NHH/2024/group1/home", type: "nettside" },
+    { title: "Tetris", src: "tetris.png", link: "https://github.com/jasmineathea/INF101/tree/main/tetris", type: "kildekode" },
+    { title: "Snake", src: "snake.png", link: "https://github.com/jasmineathea/INF101/tree/main/snake", type: "kildekode" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,11 +46,13 @@ const ProjectGallery = () => {
       <div className="grid grid-cols-2 gap-4 justify-items-center">
         {visibleImages.map((image, idx) => (
           <PhotoWindow key={idx} title={image.title}>
-            <img
-              src={image.src}
-              alt={image.title}
-              className="object-cover w-full h-full"
-            />
+            <div className="w-[270px] h-[300px] overflow-hidden border mb-3">
+              <img
+                src={image.src}
+                alt={image.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
             {image.link && (
               <Link href={image.link} target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 text-sm font-pixel hover:bg-gray-300 active:shadow-inner">

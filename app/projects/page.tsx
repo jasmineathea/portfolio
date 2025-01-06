@@ -52,7 +52,9 @@ export default function Projects() {
                 En nettside for julegaveønsker
               </p>
               <ul className="list-disc pl-6 text-sm text-gray-800 mt-1">
+                <li>Next.js, TypeScript</li>
                 <li>Sanity for å legge inn nye ønsker: bilde, link, info</li>
+                <li>Vercel for distribusjon</li>
               </ul>
             </div>
 
@@ -65,7 +67,9 @@ export default function Projects() {
                 Digitale fotoalbum. Mitt første hobbyprosjekt!
               </p>
               <ul className="list-disc pl-6 text-sm text-gray-800 mt-1">
+                <li>Next.js, TypeScript</li>
                 <li>Sanity for bildeopplasting</li>
+                <li>Vercel for distribusjon</li>
               </ul>
             </div>
           </div>
@@ -81,6 +85,9 @@ export default function Projects() {
               <p className="text-sm text-gray-800">
                 INF112 innføring i systemutvikling
               </p>
+              <ul className="list-disc pl-6 text-sm text-gray-800 mt-1">
+                <li>Java, libGDX</li>
+              </ul>
             </div>
 
             <div>
@@ -91,6 +98,9 @@ export default function Projects() {
               <p className="text-sm text-gray-800">
                 INF101 objektorientert programmering
               </p>
+              <ul className="list-disc pl-6 text-sm text-gray-800 mt-1">
+                <li>Java</li>
+              </ul>
             </div>
           </div>
         </Window>
@@ -106,8 +116,7 @@ export default function Projects() {
                 FOR19: Green digitalization and App Development
               </p>
               <ul className="list-disc pl-6 text-sm text-gray-800 mt-1">
-                <li>Laget av </li>
-                <li>Sanity for bildeopplasting</li>
+                <li>Python, flask, HTML, CSS, AWS, MySQL</li>
               </ul>
             </div>
           </div>

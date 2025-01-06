@@ -49,7 +49,7 @@ const PhotoGallery = () => {
               <img
                 src={image.src}
                 alt={image.title}
-                className="object-cover w-full h-full border"
+                className="object-cover w-full h-full"
               />
             </div>
           </PhotoWindow>
