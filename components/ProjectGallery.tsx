@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const ProjectGallery = () => {
   const projects = [
-    { title: "inselus", src: "/linselus.mp4", link: "https://linselus.vercel.app", type: "nettside", isVideo: true },
+    { title: "Linselus", src: "/linselus.mp4", link: "https://linselus.vercel.app", type: "nettside", isVideo: true },
     { title: "Jasmines jul", src: "/jasminesjul.mp4", link: "https://jasminesjul.vercel.app", type: "nettside", isVideo: true },
-    { title: "Cat Fight", src: "/sc-fight.png", link: null, type: "kildekode", isVideo: false },
+    { title: "Cat Fight", src: "/catfight.mp4", link: "https://github.com/jasmineathea/INF112", type: "kildekode", isVideo: true },
     { title: "Move Green", src: "/movegreen.mp4", link: "https://forwardedu.org/green_digitalization_course/NHH/2024/group1/home", type: "nettside", isVideo: true },
     { title: "Tetris", src: "/tetris.mp4", link: "https://github.com/jasmineathea/INF101/tree/main/tetris", type: "kildekode", isVideo: true },
     { title: "Snake", src: "/snake.mp4", link: "https://github.com/jasmineathea/INF101/tree/main/snake", type: "kildekode", isVideo: true },
