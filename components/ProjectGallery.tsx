@@ -1,23 +1,22 @@
 "use client";
 import React, { useState } from "react";
 import PhotoWindow from "@/components/PhotoWindow";
-import Image from "next/image";
 import Link from "next/link";
 
 const ProjectGallery = () => {
-  const images = [
-    { title: "linselus", src: "/linselus.png", link: "https://linselus.vercel.app", type: "nettside" },
-    { title: "Jasmines jul", src: "/jul.png", link: "https://jasminesjul.vercel.app", type: "nettside" },
-    { title: "Cat Fight", src: "/sc-fight.png", link: null, type: "kildekode" },
-    { title: "Move Green", src: "/movegreen.png", link: "https://forwardedu.org/green_digitalization_course/NHH/2024/group1/home", type: "nettside" },
-    { title: "Tetris", src: "/tetris.png", link: "https://github.com/jasmineathea/INF101/tree/main/tetris", type: "kildekode" },
-    { title: "Snake", src: "/snake.png", link: "https://github.com/jasmineathea/INF101/tree/main/snake", type: "kildekode" },
+  const projects = [
+    { title: "Linselus", src: "/linselus.mp4", link: "https://linselus.vercel.app", type: "nettside", isVideo: true },
+    { title: "Jasmines jul", src: "/jasminesjul.mp4", link: "https://jasminesjul.vercel.app", type: "nettside", isVideo: true },
+    { title: "Cat Fight", src: "/catfight.mp4", link: "https://github.com/jasmineathea/INF112", type: "kildekode", isVideo: true },
+    { title: "Move Green", src: "/movegreen.mp4", link: "https://forwardedu.org/green_digitalization_course/NHH/2024/group1/home", type: "nettside", isVideo: true },
+    { title: "Tetris", src: "/tetris.mp4", link: "https://github.com/jasmineathea/INF101/tree/main/tetris", type: "kildekode", isVideo: true },
+    { title: "Snake", src: "/snake.mp4", link: "https://github.com/jasmineathea/INF101/tree/main/snake", type: "kildekode", isVideo: true },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const itemsPerPage = 2; // Antall bilder som vises samtidig
-  const totalPages = Math.ceil(images.length / itemsPerPage);
+  const itemsPerPage = 2; // Antall prosjekter som vises samtidig
+  const totalPages = Math.ceil(projects.length / itemsPerPage);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
@@ -27,7 +26,7 @@ const ProjectGallery = () => {
     setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, totalPages - 1));
   };
 
-  const visibleImages = images.slice(
+  const visibleProjects = projects.slice(
     currentIndex * itemsPerPage,
     currentIndex * itemsPerPage + itemsPerPage
   );
@@ -43,24 +42,32 @@ const ProjectGallery = () => {
         ←
       </button>
 
-      {/* Bilderutenett */}
+      {/* Prosjektrutenett */}
       <div className="grid grid-cols-2 gap-4 justify-items-center">
-        {visibleImages.map((image, idx) => (
-          <PhotoWindow key={idx} title={image.title}>
+        {visibleProjects.map((project, idx) => (
+          <PhotoWindow key={idx} title={project.title}>
             <div className="relative w-[270px] h-[300px] overflow-hidden border mb-3">
-              <Image
-                src={image.src}
-                alt={image.title}
-                fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
-                quality={80}
-                priority={currentIndex === idx}
-              />
+              {project.isVideo ? (
+                <video
+                  src={project.src}
+                  className="object-cover w-full h-full"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={project.src}
+                  alt={project.title}
+                  className="object-cover w-full h-full"
+                />
+              )}
             </div>
-            {image.link && (
-              <Link href={image.link} target="_blank">
+            {project.link && (
+              <Link href={project.link} target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 text-sm font-pixel hover:bg-gray-300 active:shadow-inner">
-                  {image.type === "kildekode" ? "til kildekode" : "til nettside"}
+                  {project.type === "kildekode" ? "til kildekode" : "til nettside"}
                 </button>
               </Link>
             )}
