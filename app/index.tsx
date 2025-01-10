@@ -3,7 +3,9 @@ import SearchBar from '@/components/SearchBar';
 
 const Home = () => (
   <div>
-    <SearchBar />
+    <SearchBar onSearch={function (): void {
+      throw new Error('Function not implemented.');
+    } } />
   </div>
 );
 
