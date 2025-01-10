@@ -1,16 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import PhotoWindow from "@/components/PhotoWindow";
+import Image from "next/image";
 import Link from "next/link";
 
 const ProjectGallery = () => {
   const images = [
-    { title: "linselus", src: "linselus.png", link: "https://linselus.vercel.app", type: "nettside" },
-    { title: "Jasmines jul", src: "jul.png", link: "https://jasminesjul.vercel.app", type: "nettside" },
-    { title: "Cat Fight", src: "sc-fight.png", link: null, type: "kildekode" },
-    { title: "Move Green", src: "movegreen.png", link: "https://forwardedu.org/green_digitalization_course/NHH/2024/group1/home", type: "nettside" },
-    { title: "Tetris", src: "tetris.png", link: "https://github.com/jasmineathea/INF101/tree/main/tetris", type: "kildekode" },
-    { title: "Snake", src: "snake.png", link: "https://github.com/jasmineathea/INF101/tree/main/snake", type: "kildekode" },
+    { title: "linselus", src: "/linselus.png", link: "https://linselus.vercel.app", type: "nettside" },
+    { title: "Jasmines jul", src: "/jul.png", link: "https://jasminesjul.vercel.app", type: "nettside" },
+    { title: "Cat Fight", src: "/sc-fight.png", link: null, type: "kildekode" },
+    { title: "Move Green", src: "/movegreen.png", link: "https://forwardedu.org/green_digitalization_course/NHH/2024/group1/home", type: "nettside" },
+    { title: "Tetris", src: "/tetris.png", link: "https://github.com/jasmineathea/INF101/tree/main/tetris", type: "kildekode" },
+    { title: "Snake", src: "/snake.png", link: "https://github.com/jasmineathea/INF101/tree/main/snake", type: "kildekode" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,11 +47,14 @@ const ProjectGallery = () => {
       <div className="grid grid-cols-2 gap-4 justify-items-center">
         {visibleImages.map((image, idx) => (
           <PhotoWindow key={idx} title={image.title}>
-            <div className="w-[270px] h-[300px] overflow-hidden border mb-3">
-              <img
+            <div className="relative w-[270px] h-[300px] overflow-hidden border mb-3">
+              <Image
                 src={image.src}
                 alt={image.title}
-                className="w-full h-full object-cover"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                quality={80}
+                priority={currentIndex === idx}
               />
             </div>
             {image.link && (

@@ -1,15 +1,16 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import PhotoWindow from "@/components/PhotoWindow";
 
 const PhotoGallery = () => {
   const images = [
-    { title: "portrett.jpg", src: "portrett.jpg" },
-    { title: "bedkom.jpg", src: "bedkom.jpg" },
-    { title: "hovedstyret.jpg", src: "hovedstyret.jpg" },
-    { title: "nasa.jpg", src: "nasa.jpg" },
-    { title: "nhhi-cheer.jpg", src: "cheer.jpg" },
-    { title: "j&t.jpg", src: "jt.jpg" },
+    { title: "portrett.jpg", src: "/portrett.jpg" },
+    { title: "bedkom.jpg", src: "/bedkom.jpg" },
+    { title: "hovedstyret.jpg", src: "/hovedstyret.jpg" },
+    { title: "nasa.jpg", src: "/nasa.jpg" },
+    { title: "nhhi-cheer.jpg", src: "/cheer.jpg" },
+    { title: "j&t.jpg", src: "/jt.jpg" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,11 +46,14 @@ const PhotoGallery = () => {
       <div className="grid grid-cols-2 gap-4 justify-items-center">
         {visibleImages.map((image, idx) => (
           <PhotoWindow key={idx} title={image.title}>
-            <div className="w-[270px] h-[300px]">
-              <img
+            <div className="relative w-[270px] h-[300px] overflow-hidden border">
+              <Image
                 src={image.src}
                 alt={image.title}
-                className="object-cover w-full h-full"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                quality={80}
+                priority={currentIndex === idx}
               />
             </div>
           </PhotoWindow>

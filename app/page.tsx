@@ -11,8 +11,8 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowContent(true); // Vis vinduer automatisk etter 5 sekunder
-    }, 5000);
+      setShowContent(true); // Vis vinduer automatisk etter en gitt periode
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);

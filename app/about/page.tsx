@@ -128,6 +128,14 @@ export default function About() {
               </ul>
             </div>
 
+            <div className="flex gap-3">
+              <Link href="https://www4.uib.no/en/courses/inf140" target="_blank">
+                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                  om INF140
+                </button>
+              </Link>
+            </div>
+
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
@@ -142,6 +150,14 @@ export default function About() {
               </ul>
             </div>
 
+            <div className="flex gap-3">
+              <Link href="https://www4.uib.no/en/courses/inf112" target="_blank">
+                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                  om INF112
+                </button>
+              </Link>
+            </div>
+
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
@@ -154,6 +170,14 @@ export default function About() {
                 <li>Følge opp studenter gjennom første studieår</li>
                 <li>Bidra til et godt faglig og sosialt miljø blant studentene</li>
               </ul>
+            </div>
+
+            <div className="flex gap-3">
+              <Link href="https://www.uib.no/nt/142180/mentorordningen-ved-fakultet-naturvitenskap-og-teknologi#:~:text=Hva%20er%20mentorordningen%20ved%20NT,ledet%20av%201%2D2%20mentorer" target="_blank">
+                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                  Mentorordningen v/UiB
+                </button>
+              </Link>
             </div>
 
             <div>
@@ -171,13 +195,6 @@ export default function About() {
               </ul>
             </div>
 
-            <div className="flex gap-3">
-            <Link href="https://www.uib.no/nt/142180/mentorordningen-ved-fakultet-naturvitenskap-og-teknologi#:~:text=Hva%20er%20mentorordningen%20ved%20NT,ledet%20av%201%2D2%20mentorer" target="_blank">
-              <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                Mentorordningen v/UiB
-              </button>
-            </Link>
-            </div>
           </div>
         </Window>
 
@@ -197,6 +214,19 @@ export default function About() {
             </ul>
           </div>
 
+          <div className="flex gap-3">
+            <Link href="https://jenterogteknologi.com" target="_blank">
+              <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                Jenter og Teknologi
+              </button>
+            </Link>
+            <Link href="" target="_blank">
+                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                  om NASA-turen 2023
+                </button>
+              </Link>
+            </div>
+
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">NHHI Cheer</h3>
@@ -208,6 +238,14 @@ export default function About() {
             <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
               <li>Ansvar for sosiale medier og rekruttering av nye medlemmer til NHHI Cheer</li>
             </ul>
+          </div>
+
+          <div className="flex gap-3">
+            <Link href="https://www.instagram.com/nhhicheer/?hl=en" target="_blank">
+              <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                NHHI Cheer
+              </button>
+            </Link>
           </div>
 
           <div>
@@ -224,6 +262,14 @@ export default function About() {
             </ul>
           </div>
 
+          <div className="flex gap-3">
+            <Link href="https://www.instagram.com/echo_bedkom/?hl=en" target="_blank">
+              <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                echo bedkom
+              </button>
+            </Link>
+          </div>
+
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">echo – Linjeforeningen for informatikk, UiB</h3>
@@ -235,6 +281,14 @@ export default function About() {
             <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
               <li>Ivareta og fremme studentenes studie- og arbeidsvilkår, både faglig og sosialt</li>
             </ul>
+          </div>
+
+          <div className="flex gap-3">
+            <Link href="https://echo.uib.no/hjem" target="_blank">
+              <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                echo – Linjeforeningen
+              </button>
+            </Link>
           </div>
 
           <div>
@@ -251,6 +305,14 @@ export default function About() {
             </ul>
           </div>
 
+          <div className="flex gap-3">
+              <Link href="" target="_blank">
+                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                  om bedriftsturen 2023
+                </button>
+              </Link>
+            </div>
+
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">UKEN i Bergen</h3>
@@ -265,26 +327,11 @@ export default function About() {
           </div>
 
             <div className="flex gap-3">
-              <Link href="https://echo.uib.no" target="_blank">
+              <Link href="https://uken.no/info/" target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  echo
+                  UKEN i Bergen
                 </button>
               </Link>
-              <Link href="https://jenterogteknologi.com" target="_blank">
-                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  Jenter og Teknologi
-                </button>
-              </Link>
-              <Link href="" target="_blank">
-                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  om NASA-turen
-                </button>
-              </Link>
-              {/* <Link href="" target="_blank">
-                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  om bedriftsturen
-                </button>
-              </Link> */}
             </div>
 
           </div>
