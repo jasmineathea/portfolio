@@ -1,9 +1,17 @@
 import React from "react";
 
-const Window = ({ title, children }: { title: string; children: React.ReactNode }) => {
+const Window = ({
+  title,
+  children,
+  className,
+}: {
+  title: string;
+  children: React.ReactNode;
+  className?: string; // Legg til støtte for valgfri className-prop
+}) => {
   return (
     <div
-      className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] w-full max-w-4xl mb-4"
+      className={`bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] w-full max-w-4xl mb-4 ${className ?? ""}`} // Legger til className
       style={{ minWidth: "320px", maxWidth: "640px" }} // Definer breddegrenser
     >
       {/* Vinduets header */}

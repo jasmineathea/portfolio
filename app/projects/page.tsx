@@ -29,13 +29,13 @@ export default function Projects() {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex-grow flex flex-col items-center w-full bg-blue-200 py-8 pt-12">
+      <div className="flex-grow flex flex-col items-center w-full bg-blue-200 py-8 pt-12 space-y-8">
         {/* Hobbyprosjekter */}
-        <Window title="Hobbyprosjekter 🚀">
+        <Window title="Hobbyprosjekter 🚀" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
             <div>
               <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">Portfolio</h3>
+                <h3 className="font-bold text-base sm:text-lg font-pixel">Portfolio</h3>
                 <span className="text-sm text-gray-700 font-pixel">2025</span>
               </div>
               <p className="text-sm text-gray-800">
@@ -45,7 +45,7 @@ export default function Projects() {
 
             <div>
               <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">Jasmines jul</h3>
+                <h3 className="font-bold text-base sm:text-lg font-pixel">Jasmines jul</h3>
                 <span className="text-sm text-gray-700 font-pixel">Høst 2024</span>
               </div>
               <p className="text-sm text-gray-800">
@@ -60,7 +60,7 @@ export default function Projects() {
 
             <div>
               <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">Linselus</h3>
+                <h3 className="font-bold text-base sm:text-lg font-pixel">Linselus</h3>
                 <span className="text-sm text-gray-700 font-pixel">Vår 2024</span>
               </div>
               <p className="text-sm text-gray-800">
@@ -75,11 +75,11 @@ export default function Projects() {
           </div>
         </Window>
 
-        <Window title="Informatikk 🤓">
+        <Window title="Informatikk 🤓" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
             <div>
               <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">Cat Fight</h3>
+                <h3 className="font-bold text-base sm:text-lg font-pixel">Cat Fight</h3>
                 <span className="text-sm text-gray-700 font-pixel">Vår 2023</span>
               </div>
               <p className="text-sm text-gray-800">
@@ -92,7 +92,7 @@ export default function Projects() {
 
             <div>
               <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">Tetris, Snake</h3>
+                <h3 className="font-bold text-base sm:text-lg font-pixel">Tetris, Snake</h3>
                 <span className="text-sm text-gray-700 font-pixel">Vår 2022</span>
               </div>
               <p className="text-sm text-gray-800">
@@ -105,11 +105,11 @@ export default function Projects() {
           </div>
         </Window>
 
-        <Window title="NHH 👔">
+        <Window title="NHH 👔" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
             <div>
               <div className="flex justify-between items-start">
-                <h3 className="font-bold text-lg font-pixel">Karbonkalkulator</h3>
+                <h3 className="font-bold text-base sm:text-lg font-pixel">Karbonkalkulator</h3>
                 <span className="text-sm text-gray-700 font-pixel">Vår 2024</span>
               </div>
               <p className="text-sm text-gray-800">

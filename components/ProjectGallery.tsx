@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PhotoWindow from "@/components/PhotoWindow";
 import Link from "next/link";
 
@@ -14,8 +14,20 @@ const ProjectGallery = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(2); // Default er 2 for desktop
 
-  const itemsPerPage = 2; // Antall prosjekter som vises samtidig
+  useEffect(() => {
+    // Oppdater antall elementer per side basert på skjermstørrelse
+    const handleResize = () => {
+      setItemsPerPage(window.innerWidth < 640 ? 1 : 2); // 1 for mobil (sm), 2 for større skjermer
+    };
+
+    handleResize(); // Kjør en gang ved første rendering
+    window.addEventListener("resize", handleResize); // Lytt til vindusstørrelse
+
+    return () => window.removeEventListener("resize", handleResize); // Fjern event-lytter
+  }, []);
+
   const totalPages = Math.ceil(projects.length / itemsPerPage);
 
   const handlePrev = () => {
@@ -43,10 +55,14 @@ const ProjectGallery = () => {
       </button>
 
       {/* Prosjektrutenett */}
-      <div className="grid grid-cols-2 gap-4 justify-items-center">
+      <div
+        className={`grid gap-4 justify-items-center ${
+          itemsPerPage === 1 ? "grid-cols-1" : "grid-cols-2"
+        }`}
+      >
         {visibleProjects.map((project, idx) => (
           <PhotoWindow key={idx} title={project.title}>
-            <div className="relative w-[270px] h-[300px] overflow-hidden border mb-3">
+            <div className="relative w-full max-w-[270px] h-[300px] sm:w-[270px] overflow-hidden border mb-3">
               {project.isVideo ? (
                 <video
                   src={project.src}
@@ -63,7 +79,7 @@ const ProjectGallery = () => {
                   className="object-cover w-full h-full"
                 />
               )}
-            </div>
+          </div>
             {project.link && (
               <Link href={project.link} target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 text-sm font-pixel hover:bg-gray-300 active:shadow-inner">
