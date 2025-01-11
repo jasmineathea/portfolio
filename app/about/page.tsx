@@ -50,13 +50,12 @@ export default function About() {
       {/* Bottom Section */}
       <div className="flex-grow flex flex-col items-center w-full bg-blue-200 py-8 pt-12">
         {/* Utdanning */}
-        <Window title="Utdanning 📚">
+        <Window title="Utdanning 📚" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
-            {/* Bachelor i Informatikk */}
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Norges Handelshøyskole</h3>
-                <span className="text-sm text-gray-700 font-pixel">2023-2026</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">2023 - 2026</span>
               </div>
               <p className="text-sm text-gray-800">
                 Bachelor i økonomi og administrasjon
@@ -66,7 +65,7 @@ export default function About() {
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
-                <span className="text-sm text-gray-700 font-pixel">2021-2024</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">2021 - 2024</span>
               </div>
               <p className="text-sm text-gray-800">
                 Bachelor i informatikk: datateknologi
@@ -77,7 +76,7 @@ export default function About() {
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Jessheim Videregående Skole</h3>
-                <span className="text-sm text-gray-700 font-pixel">2016-2019</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">2016 - 2019</span>
               </div>
               <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
                 <li>Studiespesialisering og oppnådd generell studiekompetanse</li>
@@ -88,7 +87,7 @@ export default function About() {
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Tahoma Senior High School</h3>
-                <span className="text-sm text-gray-700 font-pixel">2017-2018</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">2017 - 2018</span>
               </div>
               <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
                 <li>Utvekslingsår på videregående skole i Maple Valley, Washington, USA</li>
@@ -98,12 +97,12 @@ export default function About() {
           </div>
         </Window>
 
-        <Window title="Jobberfaring 💼">
+        <Window title="Jobberfaring 💼" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Boots Apotek</h3>
-                <span className="text-sm text-gray-700 font-pixel">August 2014 -</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">AUG 2014 -</span>
               </div>
               <p className="text-sm text-gray-800">
                 Apotektekniker (tilkallingsvikar)
@@ -117,7 +116,7 @@ export default function About() {
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
-                <span className="text-sm text-gray-700 font-pixel">August – desember 2024, 2023, 2022</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">AUG – DES 2024, 2023, 2022</span>
               </div>
               <p className="text-sm text-gray-800">
                 Vitenskapelig assistent INF140: Introduksjon til datasikkerhet
@@ -139,7 +138,7 @@ export default function About() {
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
-                <span className="text-sm text-gray-700 font-pixel">Januar – mai 2024</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">JAN – MAI 2024</span>
               </div>
               <p className="text-sm text-gray-800">
                 Studentassistent INF112: Innføring i systemutvikling
@@ -161,7 +160,7 @@ export default function About() {
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Universitetet i Bergen</h3>
-                <span className="text-sm text-gray-700 font-pixel">2022 – 2023</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">2022 – 2023</span>
               </div>
               <p className="text-sm text-gray-800">
                 Studentmentor
@@ -183,7 +182,7 @@ export default function About() {
             <div>
               <div className="flex justify-between items-start">
                 <h3 className="font-bold text-lg font-pixel">Pon Power Norge AS</h3>
-                <span className="text-sm text-gray-700 font-pixel">Juni – august 2023, 2022, 2021, 2020</span>
+                <span className="text-sm text-gray-700 font-pixel text-right">JUN – AUG 2023, 2022, 2021, 2020</span>
               </div>
               <p className="text-sm text-gray-800">
                 Lageransatt (sommervikar)
@@ -198,12 +197,12 @@ export default function About() {
           </div>
         </Window>
 
-        <Window title="Verv og frivillig arbeid 🤝">
+        <Window title="Verv og frivillig arbeid 🤝" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">Jenter og Teknologi</h3>
-              <span className="text-sm text-gray-700 font-pixel">2023 –</span>
+              <span className="text-sm text-gray-700 font-pixel text-right">2023 –</span>
             </div>
             <p className="text-sm text-gray-800">
               Rollemodell og foredragsholder
@@ -230,7 +229,7 @@ export default function About() {
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">NHHI Cheer</h3>
-              <span className="text-sm text-gray-700 font-pixel">Januar – desember 2024</span>
+              <span className="text-sm text-gray-700 font-pixel text-right">JAN – DES 2024</span>
             </div>
             <p className="text-sm text-gray-800">
               Informasjonsansvarlig og styremedlem
@@ -251,7 +250,7 @@ export default function About() {
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">echo Bedriftskomitéen, UiB</h3>
-              <span className="text-sm text-gray-700 font-pixel">2021 – 2024</span>
+              <span className="text-sm text-gray-700 font-pixel text-right">2021 – 2024</span>
             </div>
             <p className="text-sm text-gray-800">
               Leder og styremedlem
@@ -273,7 +272,7 @@ export default function About() {
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">echo – Linjeforeningen for informatikk, UiB</h3>
-              <span className="text-sm text-gray-700 font-pixel">2023 – 2024</span>
+              <span className="text-sm text-gray-700 font-pixel text-right">2023 – 2024</span>
             </div>
             <p className="text-sm text-gray-800">
               Styremedlem
@@ -294,7 +293,7 @@ export default function About() {
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">echos Bedriftsturkomité, UiB</h3>
-              <span className="text-sm text-gray-700 font-pixel">Januar – september 2023</span>
+              <span className="text-sm text-gray-700 font-pixel text-right">JAN – SEP 2023</span>
             </div>
             <p className="text-sm text-gray-800">
               Styremedlem
@@ -316,7 +315,7 @@ export default function About() {
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">UKEN i Bergen</h3>
-              <span className="text-sm text-gray-700 font-pixel">2021 – 2022</span>
+              <span className="text-sm text-gray-700 font-pixel text-right">2021 – 2022</span>
             </div>
             <p className="text-sm text-gray-800">
               Innkjøpssjef
@@ -337,7 +336,7 @@ export default function About() {
           </div>
         </Window>
 
-        <Window title="Teknisk kompetanse 💻">
+        <Window title="Teknisk kompetanse 💻" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
             <ul className="list-disc pl-6 text-gray-800">
               <li><strong>Programmeringsspråk:</strong> Python og Java (objektorientert programmering), Haskell (funksjonell programmering), SQL, HTML, CSS, TypeScript</li>
@@ -347,7 +346,7 @@ export default function About() {
           </div>
         </Window>
 
-        <Window title="Hobbyer og interesser 🎨">
+        <Window title="Hobbyer og interesser 🎨" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
             <ul className="list-disc pl-6 text-gray-800">
               <li> Lesing </li>
@@ -365,7 +364,7 @@ export default function About() {
           </div>
         </Window>
 
-        <Window title="Språk 💬">
+        <Window title="Språk 💬" className="w-[90%] lg:w-[75%]">
           <ul className="list-disc pl-6 text-black">
             <li>Norsk 🇳🇴 morsmål</li>
             <li>Engelsk 🇺🇸 flytende skriftlig og muntlig</li>

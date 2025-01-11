@@ -1,10 +1,18 @@
 import React from "react";
 
-const Window = ({ title, children }: { title: string; children: React.ReactNode }) => {
+const Window = ({
+  title,
+  children,
+  className,
+}: {
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
     <div
-      className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] w-full max-w-4xl mb-4"
-      style={{ minWidth: "320px", maxWidth: "640px" }} // Definer breddegrenser
+      className={`bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] mb-4 ${className ?? ""}`}
+      style={{ minWidth: "320px", maxWidth: "640px" }}
     >
       {/* Vinduets header */}
       <div className="bg-blue-800 text-white font-bold font-pixel flex justify-between items-center h-8">
