@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import PhotoWindow from "@/components/PhotoWindow";
 
@@ -14,8 +14,18 @@ const PhotoGallery = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(2);
 
-  const itemsPerPage = 2; // Antall bilder som vises samtidig
+  useEffect(() => {
+    const handleResize = () => {
+      setItemsPerPage(window.innerWidth < 640 ? 1 : 2);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const totalPages = Math.ceil(images.length / itemsPerPage);
 
   const handlePrev = () => {
@@ -32,7 +42,7 @@ const PhotoGallery = () => {
   );
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center justify-center w-full max-w-[700px] mx-auto">
       {/* Forrige-knapp */}
       <button
         onClick={handlePrev}
@@ -43,10 +53,14 @@ const PhotoGallery = () => {
       </button>
 
       {/* Bilderutenett */}
-      <div className="grid grid-cols-2 gap-4 justify-items-center">
+      <div
+        className={`grid gap-4 ${
+          itemsPerPage === 1 ? "grid-cols-1" : "grid-cols-2"
+        } justify-items-center mx-4`}
+      >
         {visibleImages.map((image, idx) => (
           <PhotoWindow key={idx} title={image.title}>
-            <div className="relative w-[270px] h-[300px] overflow-hidden border">
+            <div className="relative w-full max-w-[250px] h-[300px] overflow-hidden border">
               <Image
                 src={image.src}
                 alt={image.title}
