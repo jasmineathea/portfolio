@@ -41,7 +41,7 @@ export default function Home() {
         {/* Seksjoner */}
         {showContent && (
           <div className="w-full max-w-4xl flex flex-col items-center px-4">
-            <p className="text-gray-50 font-pixel font-bold text-sm text-center italic mb-4 sm:mb-8">
+            <p className="text-gray-50 font-pixel font-bold text-sm text-center italic mb-4 sm:mb-8 pointer-events-none">
               Viser resultater for &quot;Jasmine Athea Næss&quot;:
             </p>
 

@@ -1,10 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import React, { useEffect, useState, useRef } from "react";
 
-const Footer = () => {
-  const [time, setTime] = useState("");
+const Footer: React.FC = () => {
+  const [time, setTime] = useState<string>("");
+  const [isStartMenuOpen, setIsStartMenuOpen] = useState<boolean>(false);
+  const startMenuRef = useRef<HTMLDivElement>(null);
+  const startButtonRef = useRef<HTMLDivElement>(null);
 
+  // Oppdater klokkeslettet hvert minutt
   useEffect(() => {
     const updateClock = () => {
       setTime(
@@ -12,27 +17,79 @@ const Footer = () => {
       );
     };
 
-    updateClock(); // Initial call
-    const intervalId = setInterval(updateClock, 60000); // Update every minute
-    return () => clearInterval(intervalId); // Cleanup on unmount
+    updateClock();
+    const intervalId = setInterval(updateClock, 60000);
+    return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        startMenuRef.current &&
+        !startMenuRef.current.contains(event.target as Node) &&
+        startButtonRef.current &&
+        !startButtonRef.current.contains(event.target as Node)
+      ) {
+        setIsStartMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleStartMenu = () => {
+    setIsStartMenuOpen((prev) => !prev);
+  };
+
   return (
-    <div className="w-full bg-gray-200 border-t border-black flex items-center justify-between px-4 py-2 font-pixel text-sm">
-      {/* Knapper */}
+    <div className="w-full bg-gray-200 border-t border-black flex items-center justify-between px-4 py-2 font-pixel text-sm relative">
+      {/* Start-knapp + ikoner */}
       <div className="flex items-center gap-2">
-        <div className="bg-gray-300 px-3 py-1 border border-black shadow-[2px_2px_0px_#ffffff,-2px_-2px_0px_#808080] cursor-pointer">
-          Om denne siden
-        </div>
-        <div className="flex gap-1">
-          <div className="bg-gray-300 px-2 py-1 border border-black shadow-[2px_2px_0px_#ffffff,-2px_-2px_0px_#808080] cursor-pointer">
-            Kontakt
-          </div>
+        <div
+          ref={startButtonRef}
+          className={`bg-gray-300 px-3 py-1 border border-black shadow-[2px_2px_0px_#ffffff,-2px_-2px_0px_#808080] cursor-pointer relative
+            ${isStartMenuOpen ? "shadow-[inset_2px_2px_0px_#808080,inset_-2px_-2px_0px_#ffffff]" : ""}`}
+          onClick={toggleStartMenu}
+        >
+          Start
         </div>
       </div>
 
+      {/* Start-meny */}
+      {isStartMenuOpen && (
+        <div
+          ref={startMenuRef}
+          className="absolute bottom-full left-0 w-48 bg-gray-200 border border-black "
+        >
+          <ul className="flex flex-col">
+            <li className="px-4 py-2 border-b border-gray-400 hover:bg-blue-700 hover:text-white cursor-pointer">
+              <Link href="/info" className="block w-full h-full">
+                ℹ️ Om denne siden
+              </Link>
+            </li>
+            <li className="px-4 py-2 border-b border-gray-400 hover:bg-blue-700 hover:text-white cursor-pointer">
+              <Link href="/contact" className="block w-full h-full">
+                ☎️ Kontakt
+              </Link>
+            </li>
+            <li className="px-4 py-2 border-b border-gray-400 hover:bg-blue-700 hover:text-white cursor-pointer">
+              <Link href="/settings" className="block w-full h-full">
+                ⚙️ Innstillinger
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+
       {/* Klokke */}
-      <div className="text-black">{time}</div>
+      <div className="text-black px-3 py-1 border border-black bg-gray-300 shadow-[inset_2px_2px_0px_#808080,inset_-2px_-2px_0px_#ffffff] pointer-events-none">
+        <div className="flex items-center gap-2">
+          <span>🛜</span>
+          <span>🔕</span>
+          {time}
+        </div>
+      </div>
     </div>
   );
 };

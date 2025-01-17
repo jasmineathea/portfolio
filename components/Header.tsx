@@ -11,7 +11,7 @@ const Header = () => {
         <div className="bg-blue-700 text-white font-bold font-pixel flex justify-between items-center px-4 py-2 border-b border-black">
         
         {isHomePage ? ( // navn i header skal navigere tilbake til hovedsiden *kun* om man ikke allerede er der:)
-            <span className="font-bold">@jasmineathea</span>
+            <span className="font-bold pointer-events-none">@jasmineathea</span>
         ) : (
             <Link href="/">
             <span className="font-bold hover:underline cursor-pointer">@jasmineathea</span>
