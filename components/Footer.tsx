@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 
 const Footer: React.FC = () => {
@@ -53,12 +54,6 @@ const Footer: React.FC = () => {
         >
           Start
         </div>
-
-        <div className="flex items-center gap-2 pointer-events-none">
-          <span>🛜</span>
-          <span>⏸️</span>
-          <span>⏭️</span>
-        </div>
       </div>
 
       {/* Start-meny */}
@@ -69,13 +64,19 @@ const Footer: React.FC = () => {
         >
           <ul className="flex flex-col">
             <li className="px-4 py-2 border-b border-gray-400 hover:bg-blue-700 hover:text-white cursor-pointer">
-              ℹ️ Om denne siden
+              <Link href="/info" className="block w-full h-full">
+                ℹ️ Om denne siden
+              </Link>
             </li>
             <li className="px-4 py-2 border-b border-gray-400 hover:bg-blue-700 hover:text-white cursor-pointer">
-              ☎️ Kontakt
+              <Link href="/contact" className="block w-full h-full">
+                ☎️ Kontakt
+              </Link>
             </li>
             <li className="px-4 py-2 border-b border-gray-400 hover:bg-blue-700 hover:text-white cursor-pointer">
-              ⚙️ Innstillinger
+              <Link href="/settings" className="block w-full h-full">
+                ⚙️ Innstillinger
+              </Link>
             </li>
           </ul>
         </div>
@@ -84,6 +85,7 @@ const Footer: React.FC = () => {
       {/* Klokke */}
       <div className="text-black px-3 py-1 border border-black bg-gray-300 shadow-[inset_2px_2px_0px_#808080,inset_-2px_-2px_0px_#ffffff] pointer-events-none">
         <div className="flex items-center gap-2">
+          <span>🛜</span>
           <span>🔕</span>
           {time}
         </div>

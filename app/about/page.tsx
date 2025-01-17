@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Window from "@/components/Window";
 import Link from "next/link";
 import PhotoGallery from "@/components/PhotoGallery";
