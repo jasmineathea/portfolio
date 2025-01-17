@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Window from "@/components/Window";
 import Link from "next/link";
 
 export default function Info() {
