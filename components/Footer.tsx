@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
       );
     };
 
-    updateClock(); // Initial call
-    const intervalId = setInterval(updateClock, 60000); // Update every minute
+    updateClock();
+    const intervalId = setInterval(updateClock, 60000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
         startMenuRef.current &&
         !startMenuRef.current.contains(event.target as Node) &&
         startButtonRef.current &&
-        !startButtonRef.current.contains(event.target as Node) // Ignorer Start-knappen
+        !startButtonRef.current.contains(event.target as Node)
       ) {
         setIsStartMenuOpen(false);
       }
@@ -37,7 +37,6 @@ const Footer: React.FC = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Toggle funksjon for Start-knappen
   const toggleStartMenu = () => {
     setIsStartMenuOpen((prev) => !prev);
   };
@@ -46,7 +45,6 @@ const Footer: React.FC = () => {
     <div className="w-full bg-gray-200 border-t border-black flex items-center justify-between px-4 py-2 font-pixel text-sm relative">
       {/* Start-knapp + ikoner */}
       <div className="flex items-center gap-2">
-        {/* Start-knappen */}
         <div
           ref={startButtonRef}
           className={`bg-gray-300 px-3 py-1 border border-black shadow-[2px_2px_0px_#ffffff,-2px_-2px_0px_#808080] cursor-pointer relative
@@ -56,11 +54,10 @@ const Footer: React.FC = () => {
           Start
         </div>
 
-        {/* Ikoner for det visuelle */}
-        <div className="flex items-center gap-2">
-          <span>📁</span>
-          <span>🔇</span>
-          <span>🗑️</span>
+        <div className="flex items-center gap-2 pointer-events-none">
+          <span>🛜</span>
+          <span>⏸️</span>
+          <span>⏭️</span>
         </div>
       </div>
 
@@ -85,7 +82,12 @@ const Footer: React.FC = () => {
       )}
 
       {/* Klokke */}
-      <div className="text-black">{time}</div>
+      <div className="text-black px-3 py-1 border border-black bg-gray-300 shadow-[inset_2px_2px_0px_#808080,inset_-2px_-2px_0px_#ffffff] pointer-events-none">
+        <div className="flex items-center gap-2">
+          <span>🔕</span>
+          {time}
+        </div>
+      </div>
     </div>
   );
 };
