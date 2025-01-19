@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ export default function Info() {
       <Header />
 
       {/* Innholdsområde */}
-      <div className="bg-indigo-300 w-full py-8 border-b border-black flex-1 flex flex-col justify-center items-center">
+      <div className="bg-indigo-300 w-full py-8 flex-1 flex flex-col justify-center items-center">
         <div className="flex flex-col items-center w-11/12 max-w-4xl mx-auto font-pixel text-center">
           {/* Tittel */}
           <h1 className="text-3xl font-bold text-black mb-4">Om denne siden</h1>
@@ -22,7 +23,8 @@ export default function Info() {
           </p>
           <p className="text-gray-900 text-center mb-6">
             Denne nettsiden består i all hovedsak av TypeScript. Kildekoden kan du finne ved å trykke 
-            <Link href="https://github.com/jasmineathea/portfolio"> HER.</Link>
+            <Link href="https://github.com/jasmineathea/portfolio" className="hover:underline" target="_blank"> HER</Link>
+            .
           </p>
         </div>
 
@@ -35,6 +37,9 @@ export default function Info() {
           </Link>
         </div>
       </div>
+
+    {/* Footer */}
+    <Footer />
     </div>
   );
 }

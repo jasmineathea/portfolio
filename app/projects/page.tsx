@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Window from "@/components/Window";
 import ProjectGallery from "@/components/ProjectGallery";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export default function Projects() {
   return (
@@ -9,8 +10,21 @@ export default function Projects() {
       {/* Header */}
       <Header />
 
+      {/* Breadcrumbs */}
+      <div className="w-full px-4 py-2 text-sm font-bold font-pixel text-blue-500 bg-slate-700">
+        <div className="flex gap-1 px-1 py-1">
+          <Link href="/" className="rounded-sm hover:underline hover:text-blue-200">
+            desktop
+          </Link>
+          <span className="mx-1">/</span>
+          <p className="text-blue-200">
+            projects
+          </p>
+        </div>
+      </div>
+
       {/* Top Section */}
-      <div className="bg-slate-700 w-full py-8 border-b border-black">
+      <div className="bg-slate-700 w-full py-2 pb-8 border-b border-black">
         <div className="flex flex-col items-center w-11/12 max-w-4xl mx-auto font-pixel text-center">
           {/* Tittel */}
           <h1 className="text-3xl font-bold text-white mb-4">Prosjekter</h1>
@@ -130,6 +144,9 @@ export default function Projects() {
           </Link>
         </div>
       </div>
+
+    {/* Footer */}
+    <Footer />
 
     </div>
   );

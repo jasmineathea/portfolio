@@ -1,7 +1,9 @@
+"use client";
 import Header from "@/components/Header";
 import Window from "@/components/Window";
 import Link from "next/link";
 import PhotoGallery from "@/components/PhotoGallery";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (
@@ -9,8 +11,21 @@ export default function About() {
       {/* Header */}
       <Header />
 
+      {/* Breadcrumbs */}
+      <div className="w-full px-4 py-2 text-sm font-bold font-pixel text-blue-500 bg-slate-700">
+        <div className="flex gap-1 px-1 py-1">
+          <Link href="/" className="rounded-sm hover:underline hover:text-blue-200">
+            desktop
+          </Link>
+          <span className="mx-1">/</span>
+          <p className="text-blue-200">
+            about
+          </p>
+        </div>
+      </div>
+
       {/* Top Section */}
-      <div className="bg-slate-700 w-full py-8 border-b border-black">
+      <div className="bg-slate-700 w-full py-2 pb-8 border-b border-black">
         <div className="flex flex-col items-center w-11/12 max-w-4xl mx-auto font-pixel text-center">
           {/* Navn */}
           <h1 className="text-3xl font-bold text-white mb-4">Jasmine Athea Næss</h1>
@@ -218,9 +233,9 @@ export default function About() {
                 Jenter og Teknologi
               </button>
             </Link>
-            <Link href="" target="_blank">
+            <Link href="/about/NASA">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  om NASA-turen 2023
+                  NASA-turen 2023
                 </button>
               </Link>
             </div>
@@ -304,9 +319,9 @@ export default function About() {
           </div>
 
           <div className="flex gap-3">
-              <Link href="" target="_blank">
+              <Link href="/about/bedriftstur">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  om bedriftsturen 2023
+                  bedriftsturen 2023
                 </button>
               </Link>
             </div>
@@ -389,6 +404,8 @@ export default function About() {
         </div>
       </div>
 
+    {/* Footer */}
+    <Footer />
     </div>
   );
 }

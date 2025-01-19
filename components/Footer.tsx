@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState, useRef } from "react";
 
 const Footer: React.FC = () => {
@@ -42,10 +43,14 @@ const Footer: React.FC = () => {
     setIsStartMenuOpen((prev) => !prev);
   };
 
+  const pathname = usePathname(); // Henter nåværende path
+  const isHomePage = pathname === "/"; // Sjekker om vi er på forsiden
+
   return (
-    <div className="w-full bg-gray-200 border-t border-black flex items-center justify-between px-4 py-2 font-pixel text-sm relative">
+    <div className="w-full bg-gray-200 border-black border-t flex items-center justify-between px-4 py-2 font-pixel text-sm relative">
       {/* Start-knapp + ikoner */}
       <div className="flex items-center gap-2">
+      {isHomePage && (
         <div
           ref={startButtonRef}
           className={`bg-gray-300 px-3 py-1 border border-black shadow-[2px_2px_0px_#ffffff,-2px_-2px_0px_#808080] cursor-pointer relative
@@ -54,6 +59,7 @@ const Footer: React.FC = () => {
         >
           Start
         </div>
+        )}
       </div>
 
       {/* Start-meny */}
