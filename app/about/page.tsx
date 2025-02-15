@@ -38,17 +38,17 @@ export default function About() {
             <div className="flex gap-3">
               <Link href="https://github.com/jasmineathea" target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  GitHub
+                  GitHub ➜
                 </button>
               </Link>
               <Link href="https://linkedin.com/in/jasmineathea" target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  LinkedIn
+                  LinkedIn ➜
                 </button>
               </Link>
               <Link href="https://instagram.com/jasmineathea" target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  Instagram
+                  Instagram ➜
                 </button>
               </Link>
             </div>
@@ -144,7 +144,7 @@ export default function About() {
             <div className="flex gap-3">
               <Link href="https://www4.uib.no/en/courses/inf140" target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  om INF140
+                  om INF140 ➜
                 </button>
               </Link>
             </div>
@@ -166,7 +166,7 @@ export default function About() {
             <div className="flex gap-3">
               <Link href="https://www4.uib.no/en/courses/inf112" target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  om INF112
+                  om INF112 ➜
                 </button>
               </Link>
             </div>
@@ -188,7 +188,7 @@ export default function About() {
             <div className="flex gap-3">
               <Link href="https://www.uib.no/nt/142180/mentorordningen-ved-fakultet-naturvitenskap-og-teknologi#:~:text=Hva%20er%20mentorordningen%20ved%20NT,ledet%20av%201%2D2%20mentorer" target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  Mentorordningen v/UiB
+                  Mentorordningen v/UiB ➜
                 </button>
               </Link>
             </div>
@@ -211,8 +211,36 @@ export default function About() {
           </div>
         </Window>
 
-        <Window title="Verv og frivillig arbeid 🤝" className="w-[90%] lg:w-[75%]">
+        <Window title="Verv og frivillig engasjement 🤝" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
+
+          <div>
+            <div className="flex justify-between items-start">
+              <h3 className="font-bold text-lg font-pixel">K7 Bulletin</h3>
+              <span className="text-sm text-gray-700 font-pixel text-right">2025 –</span>
+            </div>
+            <p className="text-sm text-gray-800">
+              Journalist
+            </p>
+            <ul className="list-disc pl-6 text-sm text-gray-800 mt-2">
+              <li>Journalist i redaksjonen til K7 Bulletin, den uavhengige studentavisen ved Norges Handelshøyskole</li>
+              <li>Redaksjon for økonomi og samfunn</li>
+            </ul>
+          </div> 
+
+          <div className="flex gap-3">
+            <Link href="https://k7bulletin.no" target="_blank">
+              <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                K7 Bulletin ➜
+              </button>
+            </Link>
+            <Link href="/about/bulle">
+                <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
+                  mine saker
+                </button>
+              </Link>
+            </div>
+
           <div>
             <div className="flex justify-between items-start">
               <h3 className="font-bold text-lg font-pixel">Jenter og Teknologi</h3>
@@ -230,7 +258,7 @@ export default function About() {
           <div className="flex gap-3">
             <Link href="https://jenterogteknologi.com" target="_blank">
               <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                Jenter og Teknologi
+                Jenter og Teknologi ➜
               </button>
             </Link>
             <Link href="/about/NASA">
@@ -256,7 +284,7 @@ export default function About() {
           <div className="flex gap-3">
             <Link href="https://www.instagram.com/nhhicheer/?hl=en" target="_blank">
               <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                NHHI Cheer
+                NHHI Cheer ➜
               </button>
             </Link>
           </div>
@@ -278,7 +306,7 @@ export default function About() {
           <div className="flex gap-3">
             <Link href="https://www.instagram.com/echo_bedkom/?hl=en" target="_blank">
               <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                echo bedkom
+                echo bedkom ➜
               </button>
             </Link>
           </div>
@@ -299,7 +327,7 @@ export default function About() {
           <div className="flex gap-3">
             <Link href="https://echo.uib.no/hjem" target="_blank">
               <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                echo – Linjeforeningen
+                echo – Linjeforeningen ➜
               </button>
             </Link>
           </div>
@@ -342,7 +370,7 @@ export default function About() {
             <div className="flex gap-3">
               <Link href="https://uken.no/info/" target="_blank">
                 <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                  UKEN i Bergen
+                  UKEN i Bergen ➜
                 </button>
               </Link>
             </div>
@@ -372,7 +400,7 @@ export default function About() {
           <div className="flex gap-3 pt-3">
             <Link href="https://app.thestorygraph.com/profile/jasmineathea" target="_blank">
               <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                StoryGraph
+                StoryGraph ➜
               </button>
             </Link>
           </div>
@@ -388,7 +416,7 @@ export default function About() {
           <div className="flex gap-3 pt-3">
             <Link href="https://www.duolingo.com/profile/jasmineathea" target="_blank">
               <button className="bg-gray-200 border border-black shadow-[2px_2px_0px_#808080,-2px_-2px_0px_#ffffff] px-3 py-1 font-pixel hover:bg-gray-300 active:shadow-inner">
-                Duolingo
+                Duolingo ➜
               </button>
             </Link>
           </div>

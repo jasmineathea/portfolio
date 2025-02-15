@@ -41,7 +41,7 @@ export default function NASA() {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex-grow flex flex-col items-center w-full bg-indigo-300 py-8 pt-12">
+      <div className="flex-grow flex flex-col items-center w-full bg-indigo-200 py-8 pt-12">
         <Window title="På programmet 🪐" className="w-[90%] lg:w-[75%]">
           <div className="text-black space-y-4">
             <div>
